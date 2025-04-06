@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Competitive Tic Tac Toe</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #f0f0f0;
+        }
+
+        #board {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            gap: 5px;
+            margin-bottom: 20px;
+        }
+
+        .cell {
+            width: 100px;
+            height: 100px;
+            background: #fff;
+            font-size: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            transition: background 0.2s;
+        }
+
+        .cell:hover {
+            background: #e0e0e0;
+        }
+
+        .taken {
+            pointer-events: none;
+        }
+
+        #winner {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            height: 30px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="winner"></div>
+    <div id="board"></div>
+    <button id="resetButton">Restart Game</button>
+
+    <!-- Link external JS file AFTER content is loaded -->
+    <script src="tictac.js" defer></script>
+</body>
+</html>
